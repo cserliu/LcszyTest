@@ -10,4 +10,8 @@ public class Liucs {
 		str = String.format("%s", "哈哈");
 		System.out.println(str);
 	}
+	@Test
+	public void test02(){
+		System.out.println("hello word");
+	}
 }
