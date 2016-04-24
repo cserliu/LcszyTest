@@ -9,12 +9,12 @@ public class Liucs {
 		int b = 2;
 		int c = a * b;
 		int d = 0;
-		int k = 12;
 		System.out.println(c);
 	}
 	@Test
 	public void test02(){
 		System.out.println("hello word");
 		System.out.println("");
+		System.out.println("aaa");
 	}
 }
