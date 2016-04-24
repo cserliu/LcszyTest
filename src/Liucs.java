@@ -12,7 +12,8 @@ public class Liucs {
 		System.out.println(c);
 		int bss = 123;
 		int k = 13;
-		int cdsd = 1231223;
+		int cdsd = 1231223333;
+		int wuli = 123;
 	}
 	@Test
 	public void test02(){
