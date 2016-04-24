@@ -11,6 +11,7 @@ public class Liucs {
 		int d = 0;
 		System.out.println(c);
 		int bss = 123;
+		int k = 13;
 	}
 	@Test
 	public void test02(){
