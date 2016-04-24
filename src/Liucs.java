@@ -13,6 +13,7 @@ public class Liucs {
 		int bss = 123;
 		int k = 13;
 		int cdsd = 123;
+		
 	}
 	@Test
 	public void test02(){
