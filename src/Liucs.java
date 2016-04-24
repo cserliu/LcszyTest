@@ -19,5 +19,6 @@ public class Liucs {
 	public void test02(){
 		System.out.println("aaa");
 		System.out.println("43434");
+		System.out.println("dsdsd");
 	}
 }
