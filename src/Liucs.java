@@ -9,6 +9,7 @@ public class Liucs {
 		int b = 2;
 		int c = a * b;
 		int d = 0;
+		int k = 12;
 		System.out.println(c);
 	}
 	@Test
