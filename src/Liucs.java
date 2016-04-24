@@ -8,6 +8,5 @@ public class Liucs {
 	}
 	@Test
 	public void test02(){
-		System.out.println("hello word");
 	}
 }
