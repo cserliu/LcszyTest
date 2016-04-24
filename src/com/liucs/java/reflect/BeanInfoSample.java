@@ -44,7 +44,6 @@ public class BeanInfoSample {
 		u.setUsername("Tom");
 		u.setPassword("123");
 		u.setGender("male");
-		
 		BeanInfo beanInfo = Introspector.getBeanInfo(User.class);
 		PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
 		for (PropertyDescriptor pd : propertyDescriptors) {
