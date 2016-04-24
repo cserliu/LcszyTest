@@ -8,6 +8,7 @@ public class Liucs {
 		int a = 1;
 		int b = 2;
 		int c = a * b;
+		int d = 0;
 		System.out.println(c);
 	}
 	@Test
