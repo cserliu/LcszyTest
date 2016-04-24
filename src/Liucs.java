@@ -10,6 +10,7 @@ public class Liucs {
 		int c = a * b;
 		int d = 0;
 		System.out.println(c);
+		int k = 13;
 	}
 	@Test
 	public void test02(){
