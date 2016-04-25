@@ -1,2 +1,2 @@
 git使用说明：
-1
+1 冲突后先pull from upstream,然后merge
