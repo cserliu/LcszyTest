@@ -6,49 +6,12 @@ import java.lang.reflect.*;
  * 2、知道类名，实例化出对象
  * 3、动态调用实例的方法
  * 
- * CGLib我们不讲解了，大家有时间可以自己看看。
+ *
  *
  */
 public class ReflectSample {
 	public static void main(String[] args) throws Exception {
-		classInfo("com.yuqiaotech.simplejee.dao.BaseDao");
 		newInstanceAndIncokeMethod();
-	}
-	/**
-	 * 获取类的相关信息。
-	 * @param className 完整类名。
-	 * @throws ClassNotFoundException
-	 */
-	private static void classInfo(String className) throws ClassNotFoundException{
-		Class clazz = Class.forName(className);
-		//实现的所有接口
-		System.out.println("all implemented interfaces");
-		Class[] allInterfaces = clazz.getInterfaces();
-		for (int i = 0; i < allInterfaces.length; i++) {
-			System.out.println(i+"."+allInterfaces[i]);
-		}
-		//父类层次
-		System.out.println("all super classes");
-		Class superClass = clazz.getSuperclass();
-		int i = 0;
-		while(superClass != null){
-			System.out.println(++i+"."+superClass);
-			superClass = superClass.getSuperclass();
-		}
-		//方法列表。
-		System.out.println("methods");
-		Method[] methods = clazz.getMethods();
-		for (int j = 0; j < methods.length; j++) {
-			Method m = methods[j];
-			System.out.println(j+"."+m.getName());
-		}
-		//构造函数列表
-		System.out.println("getConstructors");
-		int k = 0;
-		Constructor[] cs = String.class.getConstructors();
-		for (Constructor c : cs) {
-			System.out.println(++k+"."+c);
-		}
 	}
 	/**
 	 * 通过反射方式实例化并执行方法获取方法返回值。
