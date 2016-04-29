@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.dom4j.io.SAXReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -19,7 +20,9 @@ public class XmlTest {
 		//==============SAX=======================
 //		XmlTest.SAX("myxml.xml");
 		//==============DOM=======================
-		XmlTest.DOM("myxml.xml");
+//		XmlTest.DOM("myxml.xml");
+		//==============DOM4J=======================
+		XmlTest.DOM4J("myxml.xml");
         
         
 	}
@@ -55,6 +58,26 @@ public class XmlTest {
 	        } catch (Exception e) {  
 	            e.printStackTrace();  
 	        }  
+	}
+	public static void DOM4J(String xmlName){
+		long lasting = System.currentTimeMillis();  
+        try {  
+        	InputStream in = XmlTest.class.getResourceAsStream(xmlName); 
+            SAXReader reader = new SAXReader();
+            org.dom4j.Document doc = reader.read(in);  //注意这里的Document是org.dom4j包下的
+            org.dom4j.Element root = doc.getRootElement();  
+            org.dom4j.Element foo;  
+            for (Iterator i = root.elementIterator("stu"); i.hasNext();) {  
+                foo = (org.dom4j.Element) i.next();  
+                System.out.println("|| Name:  |" + foo.elementText("name"));  
+                System.out.println("||sex:  |" + foo.elementText("sex"));  
+                System.out.println("-------------------------------------------------");  
+            }  
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        }  
+        System.out.println("DOM4J 耗时："  
+                + (System.currentTimeMillis() - lasting) + " MS");  
 	}
 
 }
